@@ -2,6 +2,7 @@
 	<cl-crud ref="Crud">
 		<cl-row>
 			<cl-refresh-btn />
+			<cl-add-btn />
 			<cl-multi-delete-btn />
 			<cl-filter label="独立配置">
 				<cl-select :options="options.independentConfig" prop="independentConfig" :width="130" />
