@@ -1264,6 +1264,26 @@ declare namespace Eps {
 		list: PluginInfoEntity[];
 	}
 
+	interface PorAuditPageResponse {
+		pagination: PagePagination;
+		list: PorAuditEntity[];
+	}
+
+	interface PorFooterPageResponse {
+		pagination: PagePagination;
+		list: PorFooterConfigEntity[];
+	}
+
+	interface PorReservePageResponse {
+		pagination: PagePagination;
+		list: PorReserveRateEntity[];
+	}
+
+	interface PorWalletPageResponse {
+		pagination: PagePagination;
+		list: PorWalletUserEntity[];
+	}
+
 	interface RecycleDataPageResponse {
 		pagination: PagePagination;
 		list: RecycleDataEntity[];
@@ -1292,26 +1312,6 @@ declare namespace Eps {
 	interface UserInfoPageResponse {
 		pagination: PagePagination;
 		list: UserInfoEntity[];
-	}
-
-	interface PorAuditPageResponse {
-		pagination: PagePagination;
-		list: PorAuditEntity[];
-	}
-
-	interface PorReservePageResponse {
-		pagination: PagePagination;
-		list: PorReserveRateEntity[];
-	}
-
-	interface PorWalletPageResponse {
-		pagination: PagePagination;
-		list: PorWalletUserEntity[];
-	}
-
-	interface PorFooterPageResponse {
-		pagination: PagePagination;
-		list: PorFooterConfigEntity[];
 	}
 
 	interface BaseCoding {
@@ -2082,6 +2082,238 @@ declare namespace Eps {
 		request: Request;
 	}
 
+	interface PorAudit {
+		/**
+		 * 删除
+		 */
+		delete(data?: any): Promise<any>;
+
+		/**
+		 * 修改
+		 */
+		update(data?: any): Promise<any>;
+
+		/**
+		 * 单个信息
+		 */
+		info(data?: any): Promise<PorAuditEntity>;
+
+		/**
+		 * 列表查询
+		 */
+		list(data?: any): Promise<PorAuditEntity[]>;
+
+		/**
+		 * 分页查询
+		 */
+		page(data?: any): Promise<PorAuditPageResponse>;
+
+		/**
+		 * 新增
+		 */
+		add(data?: any): Promise<any>;
+
+		/**
+		 * 权限标识
+		 */
+		permission: {
+			delete: string;
+			update: string;
+			info: string;
+			list: string;
+			page: string;
+			add: string;
+		};
+
+		/**
+		 * 权限状态
+		 */
+		_permission: {
+			delete: boolean;
+			update: boolean;
+			info: boolean;
+			list: boolean;
+			page: boolean;
+			add: boolean;
+		};
+
+		request: Request;
+	}
+
+	interface PorFooter {
+		/**
+		 * 删除
+		 */
+		delete(data?: any): Promise<any>;
+
+		/**
+		 * 修改
+		 */
+		update(data?: any): Promise<any>;
+
+		/**
+		 * 单个信息
+		 */
+		info(data?: any): Promise<PorFooterConfigEntity>;
+
+		/**
+		 * 列表查询
+		 */
+		list(data?: any): Promise<PorFooterConfigEntity[]>;
+
+		/**
+		 * 分页查询
+		 */
+		page(data?: any): Promise<PorFooterPageResponse>;
+
+		/**
+		 * 新增
+		 */
+		add(data?: any): Promise<any>;
+
+		/**
+		 * 权限标识
+		 */
+		permission: {
+			delete: string;
+			update: string;
+			info: string;
+			list: string;
+			page: string;
+			add: string;
+		};
+
+		/**
+		 * 权限状态
+		 */
+		_permission: {
+			delete: boolean;
+			update: boolean;
+			info: boolean;
+			list: boolean;
+			page: boolean;
+			add: boolean;
+		};
+
+		request: Request;
+	}
+
+	interface PorReserve {
+		/**
+		 * 删除
+		 */
+		delete(data?: any): Promise<any>;
+
+		/**
+		 * 修改
+		 */
+		update(data?: any): Promise<any>;
+
+		/**
+		 * 单个信息
+		 */
+		info(data?: any): Promise<PorReserveRateEntity>;
+
+		/**
+		 * 列表查询
+		 */
+		list(data?: any): Promise<PorReserveRateEntity[]>;
+
+		/**
+		 * 分页查询
+		 */
+		page(data?: any): Promise<PorReservePageResponse>;
+
+		/**
+		 * 新增
+		 */
+		add(data?: any): Promise<any>;
+
+		/**
+		 * 权限标识
+		 */
+		permission: {
+			delete: string;
+			update: string;
+			info: string;
+			list: string;
+			page: string;
+			add: string;
+		};
+
+		/**
+		 * 权限状态
+		 */
+		_permission: {
+			delete: boolean;
+			update: boolean;
+			info: boolean;
+			list: boolean;
+			page: boolean;
+			add: boolean;
+		};
+
+		request: Request;
+	}
+
+	interface PorWallet {
+		/**
+		 * 删除
+		 */
+		delete(data?: any): Promise<any>;
+
+		/**
+		 * 修改
+		 */
+		update(data?: any): Promise<any>;
+
+		/**
+		 * 单个信息
+		 */
+		info(data?: any): Promise<PorWalletUserEntity>;
+
+		/**
+		 * 列表查询
+		 */
+		list(data?: any): Promise<PorWalletUserEntity[]>;
+
+		/**
+		 * 分页查询
+		 */
+		page(data?: any): Promise<PorWalletPageResponse>;
+
+		/**
+		 * 新增
+		 */
+		add(data?: any): Promise<any>;
+
+		/**
+		 * 权限标识
+		 */
+		permission: {
+			delete: string;
+			update: string;
+			info: string;
+			list: string;
+			page: string;
+			add: string;
+		};
+
+		/**
+		 * 权限状态
+		 */
+		_permission: {
+			delete: boolean;
+			update: boolean;
+			info: boolean;
+			list: boolean;
+			page: boolean;
+			add: boolean;
+		};
+
+		request: Request;
+	}
+
 	interface RecycleData {
 		/**
 		 * 恢复数据
@@ -2422,238 +2654,6 @@ declare namespace Eps {
 		request: Request;
 	}
 
-	interface PorAudit {
-		/**
-		 * 删除
-		 */
-		delete(data?: any): Promise<any>;
-
-		/**
-		 * 修改
-		 */
-		update(data?: any): Promise<any>;
-
-		/**
-		 * 单个信息
-		 */
-		info(data?: any): Promise<PorAuditEntity>;
-
-		/**
-		 * 列表查询
-		 */
-		list(data?: any): Promise<PorAuditEntity[]>;
-
-		/**
-		 * 分页查询
-		 */
-		page(data?: any): Promise<PorAuditPageResponse>;
-
-		/**
-		 * 新增
-		 */
-		add(data?: any): Promise<any>;
-
-		/**
-		 * 权限标识
-		 */
-		permission: {
-			delete: string;
-			update: string;
-			info: string;
-			list: string;
-			page: string;
-			add: string;
-		};
-
-		/**
-		 * 权限状态
-		 */
-		_permission: {
-			delete: boolean;
-			update: boolean;
-			info: boolean;
-			list: boolean;
-			page: boolean;
-			add: boolean;
-		};
-
-		request: Request;
-	}
-
-	interface PorReserve {
-		/**
-		 * 删除
-		 */
-		delete(data?: any): Promise<any>;
-
-		/**
-		 * 修改
-		 */
-		update(data?: any): Promise<any>;
-
-		/**
-		 * 单个信息
-		 */
-		info(data?: any): Promise<PorReserveRateEntity>;
-
-		/**
-		 * 列表查询
-		 */
-		list(data?: any): Promise<PorReserveRateEntity[]>;
-
-		/**
-		 * 分页查询
-		 */
-		page(data?: any): Promise<PorReservePageResponse>;
-
-		/**
-		 * 新增
-		 */
-		add(data?: any): Promise<any>;
-
-		/**
-		 * 权限标识
-		 */
-		permission: {
-			delete: string;
-			update: string;
-			info: string;
-			list: string;
-			page: string;
-			add: string;
-		};
-
-		/**
-		 * 权限状态
-		 */
-		_permission: {
-			delete: boolean;
-			update: boolean;
-			info: boolean;
-			list: boolean;
-			page: boolean;
-			add: boolean;
-		};
-
-		request: Request;
-	}
-
-	interface PorWallet {
-		/**
-		 * 删除
-		 */
-		delete(data?: any): Promise<any>;
-
-		/**
-		 * 修改
-		 */
-		update(data?: any): Promise<any>;
-
-		/**
-		 * 单个信息
-		 */
-		info(data?: any): Promise<PorWalletUserEntity>;
-
-		/**
-		 * 列表查询
-		 */
-		list(data?: any): Promise<PorWalletUserEntity[]>;
-
-		/**
-		 * 分页查询
-		 */
-		page(data?: any): Promise<PorWalletPageResponse>;
-
-		/**
-		 * 新增
-		 */
-		add(data?: any): Promise<any>;
-
-		/**
-		 * 权限标识
-		 */
-		permission: {
-			delete: string;
-			update: string;
-			info: string;
-			list: string;
-			page: string;
-			add: string;
-		};
-
-		/**
-		 * 权限状态
-		 */
-		_permission: {
-			delete: boolean;
-			update: boolean;
-			info: boolean;
-			list: boolean;
-			page: boolean;
-			add: boolean;
-		};
-
-		request: Request;
-	}
-
-	interface PorFooter {
-		/**
-		 * 删除
-		 */
-		delete(data?: any): Promise<any>;
-
-		/**
-		 * 修改
-		 */
-		update(data?: any): Promise<any>;
-
-		/**
-		 * 单个信息
-		 */
-		info(data?: any): Promise<PorFooterConfigEntity>;
-
-		/**
-		 * 列表查询
-		 */
-		list(data?: any): Promise<PorFooterConfigEntity[]>;
-
-		/**
-		 * 分页查询
-		 */
-		page(data?: any): Promise<PorFooterPageResponse>;
-
-		/**
-		 * 新增
-		 */
-		add(data?: any): Promise<any>;
-
-		/**
-		 * 权限标识
-		 */
-		permission: {
-			delete: string;
-			update: string;
-			info: string;
-			list: string;
-			page: string;
-			add: string;
-		};
-
-		/**
-		 * 权限状态
-		 */
-		_permission: {
-			delete: boolean;
-			update: boolean;
-			info: boolean;
-			list: boolean;
-			page: boolean;
-			add: boolean;
-		};
-
-		request: Request;
-	}
-
 	interface RequestOptions {
 		url: string;
 		method?: "OPTIONS" | "GET" | "HEAD" | "POST" | "PUT" | "DELETE" | "TRACE" | "CONNECT";
@@ -2687,10 +2687,10 @@ declare namespace Eps {
 		demo: { goods: DemoGoods; tenant: DemoTenant };
 		dict: { info: DictInfo; type: DictType };
 		plugin: { info: PluginInfo };
+		por: { audit: PorAudit; footer: PorFooter; reserve: PorReserve; wallet: PorWallet };
 		recycle: { data: RecycleData };
 		space: { info: SpaceInfo; type: SpaceType };
 		task: { info: TaskInfo };
 		user: { address: UserAddress; info: UserInfo };
-		por: { audit: PorAudit; reserve: PorReserve; wallet: PorWallet; footer: PorFooter };
 	};
 }
