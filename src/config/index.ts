@@ -5,11 +5,16 @@ import prod from './prod';
 // 是否开发模式
 export const isDev = import.meta.env.DEV;
 
+const appName =
+	import.meta.env.VITE_NAME && import.meta.env.VITE_NAME !== 'COOL-ADMIN'
+		? import.meta.env.VITE_NAME
+		: 'Ethereum Service Platform';
+
 // 配置
 export const config = {
 	// 项目信息
 	app: {
-		name: import.meta.env.VITE_NAME,
+		name: appName,
 
 		// 菜单
 		menu: {

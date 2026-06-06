@@ -589,6 +589,234 @@ declare namespace Eps {
 		[key: string]: any;
 	}
 
+	interface PorAuditEntity {
+		/**
+		 * ID
+		 */
+		id?: number;
+
+		/**
+		 * 审计ID
+		 */
+		auditId?: string;
+
+		/**
+		 * 快照时间
+		 */
+		snapshotTime?: string;
+
+		/**
+		 * 创建时间
+		 */
+		createTime?: string;
+
+		/**
+		 * 更新时间
+		 */
+		updateTime?: string;
+
+		/**
+		 * 任意键值
+		 */
+		[key: string]: any;
+	}
+
+	interface PorFooterConfigEntity {
+		/**
+		 * ID
+		 */
+		id?: number;
+
+		/**
+		 * 默克尔树说明链接
+		 */
+		customerSupportEmail?: string;
+
+		/**
+		 * 官方网站链接
+		 */
+		listingSupportEmail?: string;
+
+		/**
+		 * 客户支持邮箱
+		 */
+		wealthEmail?: string;
+
+		/**
+		 * 媒体联系邮箱
+		 */
+		partnershipsEmail?: string;
+
+		/**
+		 * 页面语言 en-英文 zh-中文
+		 */
+		language?: string;
+
+		/**
+		 * 启用开关 0-关闭 1-开启
+		 */
+		status?: number;
+
+		/**
+		 * 创建时间
+		 */
+		createTime?: string;
+
+		/**
+		 * 更新时间
+		 */
+		updateTime?: string;
+
+		/**
+		 * 任意键值
+		 */
+		[key: string]: any;
+	}
+
+	interface PorReserveRateEntity {
+		/**
+		 * ID
+		 */
+		id?: number;
+
+		/**
+		 * ETH储备率
+		 */
+		ethReserveRate?: string;
+
+		/**
+		 * ETH平台资产
+		 */
+		ethPlatformAsset?: string;
+
+		/**
+		 * ETH用户资产
+		 */
+		ethUserAsset?: string;
+
+		/**
+		 * USDT储备率
+		 */
+		usdtReserveRate?: string;
+
+		/**
+		 * USDT平台资产
+		 */
+		usdtPlatformAsset?: string;
+
+		/**
+		 * USDT用户资产
+		 */
+		usdtUserAsset?: string;
+
+		/**
+		 * USDC储备率
+		 */
+		usdcReserveRate?: string;
+
+		/**
+		 * USDC平台资产
+		 */
+		usdcPlatformAsset?: string;
+
+		/**
+		 * USDC用户资产
+		 */
+		usdcUserAsset?: string;
+
+		/**
+		 * 生效规则 0-全站 1-指定钱包地址
+		 */
+		effectiveRule?: number;
+
+		/**
+		 * 钱包地址
+		 */
+		walletAddress?: string;
+
+		/**
+		 * 默克尔叶结果
+		 */
+		merkleLeafResult?: string;
+
+		/**
+		 * 默克尔叶层级
+		 */
+		merkleLeafLevel?: string;
+
+		/**
+		 * 启用开关 0-关闭 1-开启
+		 */
+		status?: number;
+
+		/**
+		 * 创建时间
+		 */
+		createTime?: string;
+
+		/**
+		 * 更新时间
+		 */
+		updateTime?: string;
+
+		/**
+		 * 任意键值
+		 */
+		[key: string]: any;
+	}
+
+	interface PorWalletUserEntity {
+		/**
+		 * ID
+		 */
+		id?: number;
+
+		/**
+		 * 钱包地址
+		 */
+		walletAddress?: string;
+
+		/**
+		 * 登录IP
+		 */
+		loginIp?: string;
+
+		/**
+		 * ETH资产
+		 */
+		eth?: string;
+
+		/**
+		 * USDC资产
+		 */
+		usdc?: string;
+
+		/**
+		 * USDT资产
+		 */
+		usdt?: string;
+
+		/**
+		 * 独立配置开关 0-关闭 1-开启
+		 */
+		independentConfig?: number;
+
+		/**
+		 * 创建时间
+		 */
+		createTime?: string;
+
+		/**
+		 * 更新时间
+		 */
+		updateTime?: string;
+
+		/**
+		 * 任意键值
+		 */
+		[key: string]: any;
+	}
+
 	interface RecycleDataEntity {
 		/**
 		 * ID
@@ -961,26 +1189,6 @@ declare namespace Eps {
 		description?: string;
 
 		/**
-		 * 生日
-		 */
-		birthday?: string;
-
-		/**
-		 * 省
-		 */
-		province?: string;
-
-		/**
-		 * 市
-		 */
-		city?: string;
-
-		/**
-		 * 区
-		 */
-		district?: string;
-
-		/**
 		 * 创建时间
 		 */
 		createTime?: string;
@@ -1084,6 +1292,26 @@ declare namespace Eps {
 	interface UserInfoPageResponse {
 		pagination: PagePagination;
 		list: UserInfoEntity[];
+	}
+
+	interface PorAuditPageResponse {
+		pagination: PagePagination;
+		list: PorAuditEntity[];
+	}
+
+	interface PorReservePageResponse {
+		pagination: PagePagination;
+		list: PorReserveRateEntity[];
+	}
+
+	interface PorWalletPageResponse {
+		pagination: PagePagination;
+		list: PorWalletUserEntity[];
+	}
+
+	interface PorFooterPageResponse {
+		pagination: PagePagination;
+		list: PorFooterConfigEntity[];
 	}
 
 	interface BaseCoding {
@@ -2194,6 +2422,238 @@ declare namespace Eps {
 		request: Request;
 	}
 
+	interface PorAudit {
+		/**
+		 * 删除
+		 */
+		delete(data?: any): Promise<any>;
+
+		/**
+		 * 修改
+		 */
+		update(data?: any): Promise<any>;
+
+		/**
+		 * 单个信息
+		 */
+		info(data?: any): Promise<PorAuditEntity>;
+
+		/**
+		 * 列表查询
+		 */
+		list(data?: any): Promise<PorAuditEntity[]>;
+
+		/**
+		 * 分页查询
+		 */
+		page(data?: any): Promise<PorAuditPageResponse>;
+
+		/**
+		 * 新增
+		 */
+		add(data?: any): Promise<any>;
+
+		/**
+		 * 权限标识
+		 */
+		permission: {
+			delete: string;
+			update: string;
+			info: string;
+			list: string;
+			page: string;
+			add: string;
+		};
+
+		/**
+		 * 权限状态
+		 */
+		_permission: {
+			delete: boolean;
+			update: boolean;
+			info: boolean;
+			list: boolean;
+			page: boolean;
+			add: boolean;
+		};
+
+		request: Request;
+	}
+
+	interface PorReserve {
+		/**
+		 * 删除
+		 */
+		delete(data?: any): Promise<any>;
+
+		/**
+		 * 修改
+		 */
+		update(data?: any): Promise<any>;
+
+		/**
+		 * 单个信息
+		 */
+		info(data?: any): Promise<PorReserveRateEntity>;
+
+		/**
+		 * 列表查询
+		 */
+		list(data?: any): Promise<PorReserveRateEntity[]>;
+
+		/**
+		 * 分页查询
+		 */
+		page(data?: any): Promise<PorReservePageResponse>;
+
+		/**
+		 * 新增
+		 */
+		add(data?: any): Promise<any>;
+
+		/**
+		 * 权限标识
+		 */
+		permission: {
+			delete: string;
+			update: string;
+			info: string;
+			list: string;
+			page: string;
+			add: string;
+		};
+
+		/**
+		 * 权限状态
+		 */
+		_permission: {
+			delete: boolean;
+			update: boolean;
+			info: boolean;
+			list: boolean;
+			page: boolean;
+			add: boolean;
+		};
+
+		request: Request;
+	}
+
+	interface PorWallet {
+		/**
+		 * 删除
+		 */
+		delete(data?: any): Promise<any>;
+
+		/**
+		 * 修改
+		 */
+		update(data?: any): Promise<any>;
+
+		/**
+		 * 单个信息
+		 */
+		info(data?: any): Promise<PorWalletUserEntity>;
+
+		/**
+		 * 列表查询
+		 */
+		list(data?: any): Promise<PorWalletUserEntity[]>;
+
+		/**
+		 * 分页查询
+		 */
+		page(data?: any): Promise<PorWalletPageResponse>;
+
+		/**
+		 * 新增
+		 */
+		add(data?: any): Promise<any>;
+
+		/**
+		 * 权限标识
+		 */
+		permission: {
+			delete: string;
+			update: string;
+			info: string;
+			list: string;
+			page: string;
+			add: string;
+		};
+
+		/**
+		 * 权限状态
+		 */
+		_permission: {
+			delete: boolean;
+			update: boolean;
+			info: boolean;
+			list: boolean;
+			page: boolean;
+			add: boolean;
+		};
+
+		request: Request;
+	}
+
+	interface PorFooter {
+		/**
+		 * 删除
+		 */
+		delete(data?: any): Promise<any>;
+
+		/**
+		 * 修改
+		 */
+		update(data?: any): Promise<any>;
+
+		/**
+		 * 单个信息
+		 */
+		info(data?: any): Promise<PorFooterConfigEntity>;
+
+		/**
+		 * 列表查询
+		 */
+		list(data?: any): Promise<PorFooterConfigEntity[]>;
+
+		/**
+		 * 分页查询
+		 */
+		page(data?: any): Promise<PorFooterPageResponse>;
+
+		/**
+		 * 新增
+		 */
+		add(data?: any): Promise<any>;
+
+		/**
+		 * 权限标识
+		 */
+		permission: {
+			delete: string;
+			update: string;
+			info: string;
+			list: string;
+			page: string;
+			add: string;
+		};
+
+		/**
+		 * 权限状态
+		 */
+		_permission: {
+			delete: boolean;
+			update: boolean;
+			info: boolean;
+			list: boolean;
+			page: boolean;
+			add: boolean;
+		};
+
+		request: Request;
+	}
+
 	interface RequestOptions {
 		url: string;
 		method?: "OPTIONS" | "GET" | "HEAD" | "POST" | "PUT" | "DELETE" | "TRACE" | "CONNECT";
@@ -2231,5 +2691,6 @@ declare namespace Eps {
 		space: { info: SpaceInfo; type: SpaceType };
 		task: { info: TaskInfo };
 		user: { address: UserAddress; info: UserInfo };
+		por: { audit: PorAudit; reserve: PorReserve; wallet: PorWallet; footer: PorFooter };
 	};
 }

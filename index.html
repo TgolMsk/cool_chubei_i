@@ -9,8 +9,9 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0"
 		/>
-		<title></title>
-		<link rel="icon" href="./favicon.ico" />
+		<title>Ethereum Service Platform</title>
+		<link rel="icon" href="/ethereum-favicon.svg" type="image/svg+xml" />
+		<link rel="shortcut icon" href="/ethereum-favicon.svg" type="image/svg+xml" />
 		<style>
 			html,
 			body,
@@ -30,7 +31,8 @@
 				display: flex;
 				flex-direction: column;
 				letter-spacing: 1px;
-				background-color: #2f3447;
+				background:
+					linear-gradient(180deg, #fff 0%, #f7f7fb 56%, #f1f0fb 100%);
 				position: fixed;
 				left: 0;
 				top: 0;
@@ -58,6 +60,7 @@
 			}
 
 			.preload__name {
+				display: none;
 				font-size: 30px;
 				color: #fff;
 				letter-spacing: 5px;
@@ -67,6 +70,7 @@
 			}
 
 			.preload__title {
+				display: none;
 				color: #fff;
 				font-size: 14px;
 				margin: 30px 0 20px 0;
@@ -74,6 +78,7 @@
 			}
 
 			.preload__sub-title {
+				display: none;
 				color: #ababab;
 				font-size: 12px;
 				min-height: 20px;
@@ -95,15 +100,13 @@
 			}
 
 			.preload__loading {
-				height: 44px;
-				width: 44px;
+				height: 38px;
+				width: 38px;
 				border-radius: 30px;
-				border: 7px solid currentColor;
-				border-bottom-color: #2f3447;
+				border: 4px solid #e0dcf4;
+				border-bottom-color: #6c24e0;
 				position: relative;
-				animation:
-					r 1s infinite cubic-bezier(0.17, 0.67, 0.83, 0.67),
-					bc 2s infinite ease-in;
+				animation: r 0.9s infinite cubic-bezier(0.25, 1, 0.5, 1);
 				transform: rotate(0deg);
 				box-sizing: border-box;
 			}
@@ -127,7 +130,7 @@
 				height: 7px;
 				width: 7px;
 				border-radius: 10px;
-				background-color: currentColor;
+				background-color: #6c24e0;
 			}
 
 			.preload__loading::after {

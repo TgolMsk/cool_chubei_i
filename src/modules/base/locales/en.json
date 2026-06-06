@@ -123,6 +123,8 @@
   "个人中心": "Personal Center",
   "正在加载资源...": "Loading resources...",
   "初次加载资源可能需要较多时间，请耐心等待": "It may take some time for the initial resource loading. Please wait patiently.",
+  "正在加载以太坊服务平台...": "Loading Ethereum Service Platform...",
+  "正在初始化储备证明服务，请稍候": "Initializing proof-of-reserves service. Please wait.",
   "搜索名称": "Search Name",
   "是否关联上下级": "Whether to associate with superiors and subordinates",
   "名称": "Name",
