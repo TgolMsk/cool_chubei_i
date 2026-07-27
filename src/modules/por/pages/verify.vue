@@ -1904,7 +1904,7 @@ onBeforeUnmount(() => {
 .balance-head,
 .balance-row {
 	display: grid;
-	grid-template-columns: minmax(0, 1fr) auto;
+	grid-template-columns: minmax(96px, auto) minmax(0, 1fr);
 	align-items: center;
 	gap: 10px;
 }
@@ -1946,12 +1946,18 @@ onBeforeUnmount(() => {
 }
 
 .balance-amount {
+	min-width: 0;
+	max-width: 100%;
+	justify-self: end;
 	color: var(--eth-ink);
 	font-size: 20px;
 	line-height: 1.15;
 	font-weight: 850;
 	text-align: right;
-	word-break: break-word;
+	letter-spacing: 0;
+	font-variant-numeric: tabular-nums;
+	overflow-wrap: anywhere;
+	word-break: normal;
 }
 
 .merkle-card {
@@ -2309,7 +2315,7 @@ onBeforeUnmount(() => {
 
 	.balance-head,
 	.balance-row {
-		grid-template-columns: minmax(0, 1fr) auto;
+		grid-template-columns: minmax(96px, auto) minmax(0, 1fr);
 		gap: 10px;
 	}
 
@@ -2329,6 +2335,26 @@ onBeforeUnmount(() => {
 
 	.balance-amount {
 		font-size: 20px;
+	}
+}
+
+@media (max-width: 420px) {
+	.balance-row {
+		grid-template-columns: 1fr;
+		align-items: start;
+		gap: 8px;
+		padding: 12px;
+	}
+
+	.balance-asset {
+		width: 100%;
+	}
+
+	.balance-amount {
+		width: 100%;
+		justify-self: stretch;
+		font-size: 18px;
+		line-height: 1.2;
 	}
 }
 
